@@ -1,0 +1,33 @@
+{
+  "name": "anon-clothing-store",
+  "version": "1.0.0",
+  "description": "Modern dark-themed responsive eCommerce clothing store built with HTML5, CSS3, and vanilla JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "lint": "npx htmlhint **/*.html",
+    "lint:fix": "npx htmlhint **/*.html --config .htmlhintrc",
+    "screenshots": "node scripts/screenshots.mjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.html": "htmlhint"
+  },
+  "keywords": [
+    "ecommerce",
+    "responsive",
+    "html5",
+    "css3",
+    "vanilla-js",
+    "clothing-store",
+    "dark-theme"
+  ],
+  "author": "Hexabytee",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "htmlhint": "^1.1.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  }
+}
