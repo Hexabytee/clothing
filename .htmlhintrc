@@ -1,0 +1,21 @@
+{
+  "tagname-first": false,
+  "doctype-first": true,
+  "id-unique": true,
+  "attr-no-duplication": true,
+  "title-require": true,
+  "alt-require": true,
+  "doctype-html5": true,
+  "id-class-value": "dash",
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "tag-self-close": false,
+  "empty-tag-not-self-closing": ["br", "hr", "img", "input", "meta", "link"],
+  "spec-char-escape": false,
+  "src-not-empty": true,
+  "href-abs-or-rel": false,
+  "attr-unsafe-chars": true,
+  "head-script-disabled": true,
+  "img-alt-require": true,
+  "style-disabled": true
+}
