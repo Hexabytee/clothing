@@ -1,0 +1,202 @@
+/*-----------------------------------*\
+  #base.css - Dark Luxury Design System
+\*-----------------------------------*/
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTIES
+\*-----------------------------------*/
+
+:root {
+
+  /* Backgrounds */
+  --bg-body: hsl(0, 0%, 7%);
+  --bg-card: hsl(0, 0%, 11%);
+  --bg-elevated: hsl(0, 0%, 14%);
+
+  /* Text */
+  --text-primary: hsl(0, 0%, 97%);
+  --text-secondary: hsl(0, 0%, 65%);
+  --text-muted: hsl(0, 0%, 42%);
+
+  /* Accent */
+  --accent: hsl(353, 100%, 68%);
+  --accent-hover: hsl(353, 100%, 55%);
+
+  /* Borders & Shadows */
+  --border: hsl(0, 0%, 18%);
+  --border-light: hsl(0, 0%, 22%);
+  --shadow: 0 4px 24px hsla(0, 0%, 0%, 0.5);
+  --glow: 0 0 30px hsla(353, 100%, 68%, 0.12);
+
+  /* Functional */
+  --success: hsl(152, 51%, 52%);
+  --danger: hsl(0, 100%, 70%);
+
+  /* Typography */
+  --fs-hero: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-1: clamp(1.75rem, 3vw, 2.25rem);
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.125rem;
+  --fs-5: 1rem;
+  --fs-6: 0.875rem;
+  --fs-7: 0.8125rem;
+  --fs-8: 0.75rem;
+  --fs-9: 0.6875rem;
+  --fs-10: 0.625rem;
+
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-med: 0.4s var(--ease-out);
+  --transition-slow: 0.6s var(--ease-out);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+}
+
+
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+img, ion-icon, button, a { display: block; }
+
+span { display: inline-block; }
+
+html {
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior: contain;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+input::placeholder { font: inherit; }
+
+body {
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+/*-----------------------------------*\
+  #SCROLLBAR
+\*-----------------------------------*/
+
+body::-webkit-scrollbar { width: 8px; }
+
+body::-webkit-scrollbar-track { background: var(--bg-body); }
+
+body::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+
+
+
+/*-----------------------------------*\
+  #REUSED STYLES
+\*-----------------------------------*/
+
+.container {
+  padding: 0 24px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.has-scrollbar { padding-bottom: 5px; }
+
+.has-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track { background: transparent; }
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb { background: var(--text-muted); }
+
+.title {
+  color: var(--text-primary);
+  font-size: var(--fs-3);
+  font-weight: var(--weight-600);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+
+
+
+/*-----------------------------------*\
+  #ANIMATIONS
+\*-----------------------------------*/
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
